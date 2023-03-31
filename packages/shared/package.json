@@ -1,0 +1,16 @@
+{
+    "name": "shared",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "pdeploy": "echo 'OK'",
+        "deploy": "echo 'OK'",
+        "build": "npm run lint && echo 'OK'",
+        "test": "jest",
+        "lint": "eslint --max-warnings=0 src/"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

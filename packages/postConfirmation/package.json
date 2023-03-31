@@ -1,0 +1,19 @@
+{
+    "name": "postConfirmation",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "upload": "nx run postConfirmation:build && zip -r index.zip dist/ && aws s3 cp index.zip s3://code-zips-bucket/lambdas/postConfirmation.zip",
+        "deploy": "npm run upload && aws lambda update-function-code --s3-bucket code-zips-bucket --s3-key lambdas/postConfirmation.zip --function-name workflow-postConfirmation --region eu-west-3",
+        "build": "npm run lint && webpack",
+        "test": "jest",
+        "lint": "eslint --max-warnings=0 src/"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "shared": "*"
+    }
+}

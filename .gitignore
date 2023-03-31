@@ -1,0 +1,10 @@
+**/node_modules
+**/.terraform*
+coverage
+dist
+build
+.DS_Store
+*mock*
+*reals*
+**/*.zip
+frontend/src/library
